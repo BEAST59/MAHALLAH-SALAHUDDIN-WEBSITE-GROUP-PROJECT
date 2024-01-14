@@ -18,7 +18,7 @@
   
   3- Contact us page
 
-  4- Facilities & maps pages
+  4- Facilities & maps pages //Maps using Google Map API
 
   5- Activities & event pages
 

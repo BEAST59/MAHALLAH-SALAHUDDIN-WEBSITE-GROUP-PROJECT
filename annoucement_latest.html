@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Annoucement Page Latest Section</title>
+  <link rel="stylesheet" href="annoucement.css">
+  <link href='https://fonts.googleapis.com/css?family=Moul' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo-container">
+        <img src="Images/Salahuddin logo.png" alt="salahuddin" height="70" width="70" />
+        <h1 class="title">Mahallah Salahuddin <br> <span class="subtitle">The Land of Warrior</span></h1>
+      </div>
+
+      <nav class="menu">
+        <ul>
+          <li><a href="Home.html">HOME</a></li>
+          <li><a href="FacilityMap.html">FACILITIES/MAPS</a></li>
+          <li><a href="activities_latest.html">ACTIVITIES/EVENTS</a></li>
+          <li><a class="onpage">ANNOUNCEMENTS/NEWS</a></li>
+          <li><a href="about_us.html">ABOUT US</a></li>
+          <li><a href="contact_us.html">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <article>
+      <main>
+        <div class="image-container">
+          <div class="image-item">
+            <p class="hidden-description">
+              Attention to resident of MSA,<br><br> We would like to inform that the wifi maintenance will be on 1st November
+              2023, from 10 a.m - 2 p.m. Please take note. <br>We really appreciate your patience.</p>
+            <img src="Images/wifi.png" alt="Image 1">
+            <p>MSA Wifi Maintenance <br> <span class="date">November 1,2023</span></p>
+          </div>
+          <div class="image-item">
+            <p class="hidden-description">
+              Dear resident of MSA,<br><br> We would like to inform that the new prayer hall is now open. Hope the residents 
+              can obey the rules and manners in the prayer hall.<br><br>
+              It is hoped that all residents can come and worship comfortably.</p>
+            <img src="Images/surau.png" alt="Image 2">
+            <p>MSA Opening New Prayer Hall <br> <span class="date">October 24,2023</span></p>
+          </div>
+          <div class="image-item">
+            <p class="hidden-description">
+              Attention to resident of MSA, <br><br> We would like to inform that the cafateria will be close on 11th October
+              until 16th October 2023 due to mid-sem break. <br>Please take note.</p>
+            <img src="Images/cafe.png" alt="Image 3">
+            <p>MSA Closing of Cafeteria <br> <span class="date">October 11,2023</span></p>
+          </div>
+          <div class="image-item">
+            <p class="hidden-description">
+              Dear resident of MSA,<br><br> We will be recruiting new members for the MRC bureau. For those who are interested, 
+              you can come to our interview on: <br><br>Date: 30th September 2023<br>Time: 9a.m - 3p.m<br>Place: MSA Meeting Room
+              <br><br>Your cooperation is greatly appreciated.</p>
+            <img src="Images/mrc.jpg" alt="Image 4">
+            <p>MRC Bureau Reqruitment <br> <span class="date">September 30,2023</span></p>
+          </div>
+          <div class="image-item">
+            <p class="hidden-description">
+              Dear resident of MSA,<br><br> We are delighted to annouce that we had set up a food bank outside the MRC operating
+              room(beside cafe). Hence if you are in need of food or basic necessities, you are welcome to visit the food bank.
+              We are also very grateful for any contribution.<br><br>Please be reminded to only take what you need and give what you can!</p>
+            <img src="Images/foodbank.jpg" alt="Image 5">
+            <p>Foodbank for Ramadhan <br> <span class="date">September 16,2023</span></p>
+          </div>
+        </div>
+      </main>
+    </article>
+
+    <aside>
+      <h2>ANNOUNCEMENTS/NEWS</h2>
+      <h3 class="onpage2">• Latest</h3>
+      <h3 class="topage"><a href="annoucement_all.html">• All</a></h3>
+    </aside>
+
+    <footer>
+      <hr class="footer-line">
+      <div class="footer-content">
+        <h4>Copyright @ 2024 Max Itd. <br>All rights reserved<br><br>Follow us:</h4>
+        <div class="social-media-icons">
+          <a
+            href="https://www.facebook.com/profile.php?id=122904107810478&paipv=0&eav=AfbMOIKXyMCKAfPzD-q11VhkGHbdmOrC_ZodrQKGqVNPZGpQCRHfWDQ8NxLjshvyVzw&_rdr"><img
+              src="Images/facebook.png" alt="Facebook"></a>
+          <a href="https://wa.me/60174585726"><img src="Images/whatsapp.png" alt="Twitter"></a>
+          <a href="https://www.instagram.com/mahallahsalahuddiniium/"><img src="Images/instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </footer>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Modal Image">
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+
+    <script>
+      
+      function openModal(description) {
+        const modal = document.getElementById('myModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalDescription = document.getElementById('modalDescription');
+    
+        modalImage.style.display = 'none'; 
+    
+        if (description.trim()) { 
+          modalDescription.innerHTML = description;
+        } else {
+          modalDescription.textContent = 'No description available';
+        }
+    
+        modal.style.display = 'block';
+      }
+    
+      function closeModal() {
+        const modal = document.getElementById('myModal');
+        modal.style.display = 'none';
+      }
+    
+      window.onclick = function (event) {
+        var modal = document.getElementById('myModal');
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      }
+    
+      const imageItems = document.querySelectorAll('.image-item');
+      imageItems.forEach(item => {
+        item.addEventListener('click', function () {
+          const description = this.querySelector('.hidden-description').innerHTML; 
+          openModal(description);
+        });
+      });
+    </script>
+  
+
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahallah Salahuddin Al-Ayyubi</title>
+    <link rel="stylesheet" href="Contact_Us.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo-container">
+        <img src="Images/Salahuddin logo.png" alt="salahuddin" height="70" width="70" />
+        <h1 class="title">Mahallah Salahuddin <br> <span class="subtitle">The Land of Warrior</span></h1>
+      </div>
+
+      <nav class="menu">
+        <ul>
+          <li><a href="Home.html">HOME</a></li>
+          <li><a href="FacilityMap.html">FACILITIES/MAPS</a></li>
+          <li><a href="activities_latest.html">ACTIVITIES/EVENTS</a></li>
+          <li><a href="annoucement_latest.html">ANNOUNCEMENTS/NEWS</a></li>
+          <li><a href="about_us.html">ABOUT US</a></li>
+          <li><a class="onpage">CONTACT US</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <h1>Contact Us</h1>
+
+      <section>
+          <img src="Images/contact_us_background.png" alt="Background" class="background">
+          <p><strong>CONTACT NO.:</strong><br>Mahallah Office (MO) – 03 6421 5981/5982/5983</p>
+          <p><strong>EMAIL:</strong><br>Mahallah Principal<br>Dr. Noor Hasrul Nizan Bin Mohammad Noor : nhasrul@iium.edu.my
+              <br>Assistant Hostel Manager<br>Puan Roslaily Bt. Hashim : roslaily@iium.edu.my<br></p>
+          <p><strong>EMERGENCY CONTACT NUMBER</strong>:<br>DAYA BERSIH SDN BHD (DBSB) 03-6421 5415
+              <br>OFFICE OF SECURITY MANAGEMENT (OSeM) 03-6421 5555 (24 hours)
+              <br>IUM HEALTH AND WELNESS CENTRE (IHWC) 03-6421 4444 (24 hours)</p>
+      </section>
+    </main>
+
+    <aside>
+      <h4>Question?, feedback - How we can help you:</h4>
+    
+      <form id="contact-form">
+        <div class="feedback-input">
+          <label for="message">Tell us what you need help with:</label>
+          <textarea name="textarea" rows="5" cols="20">Write something here</textarea>
+        </div>
+        <button onclick="showThankYou()">Submit</button>
+      </form>
+    
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Thank you for your feedback!</p>
+        </div>
+      </div>
+    </aside>
+    
+
+  <footer>
+    <hr class="footer-line">
+    <div class="footer-content">
+      <h4>Copyright @ 2024 Max Itd. <br>All rights reserved<br><br>Follow us:</h4>
+      <div class="social-media-icons">
+        <a href="https://www.facebook.com/profile.php?id=122904107810478&paipv=0&eav=AfbMOIKXyMCKAfPzD-q11VhkGHbdmOrC_ZodrQKGqVNPZGpQCRHfWDQ8NxLjshvyVzw&_rdr"><img src="Images/facebook.png" alt="Facebook"></a>
+        <a href="https://wa.me/60174585726"><img src="Images/whatsapp.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/mahallahsalahuddiniium/"><img src="Images/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </footer>
+
+  </div>
+
+  <script>
+    function showThankYou() {
+            alert("Thank you for your feedback!");
+        }
+  </script>
+  
+</body>
+
+</html>

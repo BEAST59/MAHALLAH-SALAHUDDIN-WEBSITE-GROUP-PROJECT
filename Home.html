@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahallah Salahuddin Al-Ayyubi</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-section">
+            <img src="Images/logo.png" alt="Mahallah Logo" class="mahallah-logo">
+            <div class="title-and-tagline">
+                <h1>Mahallah Salahuddin Al-Ayyubi</h1>
+                <p>The Land Of Warriors</p>
+            </div>
+        </div>
+        <div class="call-to-action">
+            <p>COME AND JOIN US IN UNIFORM BODIES! BE PART OF OUR FAMILIES!</p>
+        </div>
+        <div class="full-width-image">
+            <img src="Images/perbarisan_1-transformed.jpeg" alt="Gambar perbarisan" class="parade-image">
+        </div>
+    </header>
+
+    <nav>
+        <a href="Home.html">HOME</a>
+        <a href="FacilityMap.html">FACILITIES / MAPS</a>
+        <a href="activities_latest.html">ACTIVITIES / EVENT</a>
+        <a href="annoucement_latest.html">ANNOUNCEMENTS / NEWS</a>
+        <a href="about_us.html">ABOUT US</a>
+        <a href="contact_us.html">CONTACT US</a>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="Images/Salahuddin Al-Ayyubi Logo.jpg" alt="Salahuddin Al-Ayyubi Logo" class="hero-logo" />
+                <div class="hero-text">
+                    <h2>WHO IS SALAHUDDIN AL-AYYUBI</h2>
+                    <p>Salahuddin al-Ayyubi, also known as Saladin in the Western world, was a prominent
+                        medieval Muslim military leader and ruler. He is best known for his role in the Crusades,
+                        a series of religious wars in the Middle Ages between Christian European powers and Muslim
+                        forces in the Holy Land. Salahuddin al-Ayyubi was born in 1137 in Tikrit, Iraq, and he rose
+                        to prominence as a military commander and statesman.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-title">
+            <h2>THE PILLARS OF MAHALLAH SALAHUDDIN AL-AYYUBI</h2>
+            <p>Salahuddin Al-Ayyubi As Our Role Model</p>
+        </section>
+
+        <section class="values-icons">
+            <div class="value-icon box">
+                <img src="Images/CHIVALRY AND HONOR.png" alt="Chivalry and Honor" class="value-image">
+                <h3>CHIVALRY AND HONOR:</h3>
+                <p>Salahuddin's is often admired for his sense of chivalry and honor. His treatment of
+                    captives and the inhabitants of Jerusalem after its capture during the Crusades is celebrated
+                    as a demonstration of his noble character and adherence to ethical and moral principles.</p>
+            </div>
+            <div class="value-icon box">
+                <img src="Images/UNITY AND LEADERSHIP.png" alt="Unity and Leadership" class="value-image">
+                <h3>UNITY AND LEADERSHIP:</h3>
+                <p>Salahuddin's ability to unite various Muslim factions and his leadership in the face of a common
+                    enemy are considered inspirational. He successfully brought together different groups and leaders
+                    to work towards a common goal, which is seen as an example of effective leadership.</p>
+            </div>
+            <div class="value-icon box">
+                <img src="Images/DEDICATION TO A JUST CAUSE.png" alt="Dedication to a Just Cause" class="value-image">
+                <h3>DEDICATION TO A JUST CAUSE:</h3>
+                <p>Salahuddin's efforts to defend Muslim lands from foreign invasion and his commitment to the
+                    liberation of Jerusalem from Crusader control are often seen as a dedication to a just and
+                    righteous cause. This commitment to a higher purpose resonates with those who admire his
+                    determination.</p>
+            </div>
+        </section>
+
+        <section class="uniform-units">
+            <h2 class="section-title">OUR UNIFORM UNITS</h2>
+            <div class="units-container">
+                <div class="unit">
+                    <img src="Images/tentera.png" alt="Unit 1 Logo" class="unit-logo">
+                    <p>ROTU ARMY</p>
+                </div>
+                <div class="unit">
+                    <img src="Images/Airforce.png" alt="Unit 2 Logo" class="unit-logo">
+                    <p>ROTU AIRFORCE </p>
+                </div>
+                <div class="unit">
+                    <img src="Images/suksis.png" alt="Unit 3 Logo" class="unit-logo">
+                    <p>SUKSIS</p>
+                </div>
+                <div class="unit">
+                    <img src="Images/sispa.png" alt="Unit 4 Logo" class="unit-logo">
+                    <p>SISPA </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr class="footer-line">
+        <div class="footer-content">
+            <h4>Copyright @ 2024 Max Itd. <br>All rights reserved<br><br>Follow us:</h4>
+            <div class="social-media-icons">
+                <a
+                    href="https://www.facebook.com/profile.php?id=122904107810478&paipv=0&eav=AfbMOIKXyMCKAfPzD-q11VhkGHbdmOrC_ZodrQKGqVNPZGpQCRHfWDQ8NxLjshvyVzw&_rdr">
+                    <img src="Images/facebook.png" alt="Facebook"> </a>
+                <a href="https://wa.me/60174585726"> <img src="Images/whatsapp.png" alt="whatsapp"> </a>
+                <a href="https://www.instagram.com/mahallahsalahuddiniium/"> <img src="Images/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const overlay = document.getElementById('overlay');
+            let activeBox = null;
+
+            document.querySelectorAll('.values-icons .box, .uniform-units .unit').forEach(box => {
+                box.addEventListener('click', () => {
+                    if (activeBox) {
+                        resetActiveBox();
+                    } else {
+                        setActiveBox(box);
+                    }
+                });
+            });
+
+            overlay.addEventListener('click', resetActiveBox);
+
+            function setActiveBox(box) {
+                box.classList.add('active');
+                overlay.style.display = 'block';
+                activeBox = box;
+            }
+
+            //reset the box 
+            function resetActiveBox() {
+                if (!activeBox) return;
+                activeBox.classList.remove('active');
+                overlay.style.display = 'none';
+                activeBox = null;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

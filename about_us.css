@@ -1,0 +1,304 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  display: grid;
+  gap: 20px;
+}
+
+.logo-container {
+  width: 100%;
+  float: left;
+  height: 20px;
+}
+
+header {
+  grid-area: head;
+  padding: 20px;
+  background-color: rgb(255, 238, 217);
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.4em;
+  display: inline;
+}
+
+.subtitle {
+  font-weight: lighter;
+  font-size: 0.8em;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  padding-right: 5px;
+  white-space: nowrap;
+}
+
+.menu ul li {
+  margin-left: 70px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Trebuchet MS';
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+.menu ul li a:hover {
+  color: #ff7200;
+}
+
+.menu ul .onpage {
+  color: rgb(119, 107, 93);
+  font-family: 'Trebuchet MS';
+  transition: none;
+}
+
+.menu ul .onpage:hover {
+  color: rgb(119, 107, 93);
+  ;
+}
+
+.container {
+  display: grid;
+  gap: 0;
+  grid-template-areas:
+    "head head head head"
+    "side content content content"
+    "foot foot foot foot";
+  grid-template-columns: 1fr 3fr;
+}
+
+main {
+  grid-area: content;
+  margin: 50px;
+  gap: 20px;
+}
+
+aside {
+  grid-area: side;
+  background-color: rgb(176, 166, 149);
+  grid-area: side;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  font-weight: bolder;
+  font-size: 0.7em;
+  font-family: 'Trebuchet MS';
+  word-wrap: break-word;
+  text-align: center;
+}
+
+h2 {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.onpage2 {
+  color: white;
+  background-color: rgb(119, 107, 93);
+  font-size: 1.4em;
+  padding: 10px;
+  text-align: left;
+}
+
+.topage {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.topage a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4em;
+  transition: 0.4s ease-in-out;
+}
+
+textarea {
+  border: 0 none white;
+  overflow-y: auto;
+  padding: 0;
+  outline: none;
+  background-color: #D0D0D0;
+  resize: none;
+}
+
+.color {
+  color: #ff7200;
+}
+
+.center {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.Principal {
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  grid-area: foot;
+  background-color: rgb(255, 238, 217);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-line {
+  border-left: 4px solid black;
+  height: 250px;
+  margin-right: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+h4 {
+  font-family: Arial;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.social-media-icons img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media (max-width: 768px) {
+
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    font-family: Arial;
+  }
+
+  header,
+  aside,
+  footer {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .container {
+    grid-template-areas:
+      "head"
+      "side"
+      "content"
+      "foot";
+    grid-template-columns: 1fr;
+  }
+
+
+  header {
+    padding: 20px;
+    background-color: rgb(255, 238, 217);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 1.4em;
+    display: inline;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-weight: lighter;
+    font-size: 0.8em;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+  .menu ul {
+    justify-content: flex-start;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    white-space: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu ul li {
+    margin-left: 10px;
+  }
+
+  main {
+    margin: 40px;
+  }
+
+  h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  h4 {
+    font-family: Arial;
+    font-weight: bold;
+    margin-right: 130px;
+  }
+
+  .footer-line {
+    border-left: 4px solid black;
+    height: 200px;
+    margin-right: 20px;
+  }
+
+}

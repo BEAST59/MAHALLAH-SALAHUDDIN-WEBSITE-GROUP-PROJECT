@@ -24,7 +24,7 @@
 
   6- Announcement & news pages
 
-- 6 of the html file also contains javascript code
+- 6 of the html files contains javascript code
 
   1- Home.html
   

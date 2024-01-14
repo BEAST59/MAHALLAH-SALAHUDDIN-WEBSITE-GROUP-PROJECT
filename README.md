@@ -10,6 +10,7 @@
 
   4- MUHAMMAD LUQMAN BISTHAMY BIN SHAM ZULANEY (2216289)
 
+- Some of the html file also contains javascript code (Home.html , contact_us.html , announcement_latest.html , announcement_all.html , activities_latest.html , activities_all.html)
 - This website contain 6 main pages that describe Mahallah Salahuddin Al-Ayyubi
   
   1- Home page
@@ -23,3 +24,5 @@
   5- Activities & event pages
 
   6- Announcement & news pages
+
+  
